@@ -40,7 +40,7 @@ export default function AppShell({ session, onLogout }: { session: AuthSession; 
       {/* Desktop sidebar (hidden on mobile — replaced by the top bar + bottom tab bar below) */}
       <aside className="hidden w-60 shrink-0 flex-col bg-sidebar px-4 py-6 md:flex">
         <h1 className="text-lg font-semibold tracking-tight text-white">
-          🎯 JobMatchFlow
+          🎯 jobfishing
         </h1>
         <p className="mt-1 text-xs text-slate-400">Daily job inbox</p>
         <hr className="my-4 border-white/10" />
@@ -80,7 +80,7 @@ export default function AppShell({ session, onLogout }: { session: AuthSession; 
 
       {/* Mobile top bar: brand + (admin only) workspace switcher + sign out */}
       <header className="fixed inset-x-0 top-0 z-20 flex items-center justify-between gap-3 bg-sidebar px-4 py-3 md:hidden">
-        <h1 className="shrink-0 text-sm font-semibold tracking-tight text-white">🎯 JobMatchFlow</h1>
+        <h1 className="shrink-0 text-sm font-semibold tracking-tight text-white">🎯 jobfishing</h1>
         <div className="flex min-w-0 items-center gap-3">
           {session.role === "admin" && <div className="w-36">{adminSwitcher}</div>}
           <a href="mailto:leo_jiangq@gmail.com" title="Questions or feedback? Email Leo" className="shrink-0 text-base">✉️</a>

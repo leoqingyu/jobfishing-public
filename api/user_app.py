@@ -1,5 +1,5 @@
 """
-JobMatchFlow 用户侧 HTTP API（多份上传简历 + 素材库评分推荐 + 求职信生成等）。
+jobfishing 用户侧 HTTP API（多份上传简历 + 素材库评分推荐 + 求职信生成等）。
 
 简历/求职信各自的生成路由在 api/resume_routes.py（同步函数，FastAPI 自动丢进线程池执行，
 不阻塞 ASGI 事件循环），本文件只挂载路由 + 少数轻量端点（mark-applied、save/unsave 等）。
@@ -41,7 +41,7 @@ if settings.environment == "production" and not settings.secret_key:
     )
 
 app = FastAPI(
-    title="JobMatchFlow User API",
+    title="jobfishing User API",
     version="0.1.0",
 )
 

@@ -36,7 +36,7 @@ export default function OnboardingModal({
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/60 px-4 py-8 sm:items-center">
       <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Welcome to JobMatchFlow</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Welcome to jobfishing</p>
         <h1 className="mt-2 font-display text-2xl font-semibold text-ink">Hi, I'm Leo — a few things before you start</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           I built this to help people spend less time scrolling job boards and more time on
@@ -56,7 +56,7 @@ export default function OnboardingModal({
           <div>
             <p className="font-semibold">2. Choose your country</p>
             <p className="mt-1 text-muted">
-              This is the market JobMatchFlow will search for you. One heads-up:{" "}
+              This is the market jobfishing will search for you. One heads-up:{" "}
               <span className="font-medium text-ink">once you pick, it's locked</span> — this isn't
               something you can change yourself in Settings afterward. If you ever need to switch,
               just email me and I'll update it on my end.
@@ -91,7 +91,7 @@ export default function OnboardingModal({
             <p className="font-semibold">Then you're set</p>
             <p className="mt-1 text-muted">
               Once your experience is filled in, click "Start matching" once. After that,
-              JobMatchFlow runs on its own — it checks for new jobs every day and keeps matching
+              jobfishing runs on its own — it checks for new jobs every day and keeps matching
               them against your profile automatically. You don't need to keep coming back and
               clicking.
             </p>
@@ -120,7 +120,7 @@ export default function OnboardingModal({
           Questions, bugs, or ideas? Email me anytime at{" "}
           <a href="mailto:leo_jiangq@gmail.com" className="font-medium text-accent">leo_jiangq@gmail.com</a> — I read everything.
           <br />
-          JobMatchFlow is open source on GitHub — run your own instance with your own API keys if
+          jobfishing is open source on GitHub — run your own instance with your own API keys if
           you'd rather, or email me and we can work out usage-based pricing instead.
           <br />
           And genuinely — I hope you find something great soon and never need to open this app again.

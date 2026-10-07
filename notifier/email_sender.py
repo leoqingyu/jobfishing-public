@@ -24,8 +24,8 @@ def send_followup_reminders(recipient: str, jobs: list) -> bool:
         resend.api_key = settings.resend_api_key
         rows = "".join(f"<li>{title} · {company or ''}</li>" for title, company in jobs)
         resend.Emails.send({"from": settings.notification_email_from, "to": [recipient],
-            "subject": "[JobMatchFlow] 要不要跟进这些投递？",
-            "html": f"<h2>两周没有更新的投递</h2><ul>{rows}</ul><p>登录 JobMatchFlow 更新状态或发送 follow-up。</p>"})
+            "subject": "[jobfishing] 要不要跟进这些投递？",
+            "html": f"<h2>两周没有更新的投递</h2><ul>{rows}</ul><p>登录 jobfishing 更新状态或发送 follow-up。</p>"})
         return True
     except Exception as e:
         logger.error(f"跟进提醒发送失败: {e}")
@@ -53,7 +53,7 @@ def send_followup_reminders(recipient: str, jobs: list) -> bool:
 
 def _build_digest_email(jobs: list) -> tuple[str, str]:
     count = len(jobs)
-    subject = f"[JobMatchFlow] {count} 个高匹配岗位需要关注"
+    subject = f"[jobfishing] {count} 个高匹配岗位需要关注"
 
     rows = ""
     for s in jobs:
@@ -65,7 +65,7 @@ def _build_digest_email(jobs: list) -> tuple[str, str]:
 
     tg = settings.score_threshold_generate
     html = f"""
-<h2>JobMatchFlow 高匹配岗位报告</h2>
+<h2>jobfishing 高匹配岗位报告</h2>
 <p>以下 {count} 个岗位匹配度 ≥ {tg}（当前 generate 阈值），已自动生成定制材料：</p>
 <table border="1" cellpadding="8" style="border-collapse:collapse;">
   <thead>
@@ -73,7 +73,7 @@ def _build_digest_email(jobs: list) -> tuple[str, str]:
   </thead>
   <tbody>{rows}</tbody>
 </table>
-<p>请登录 JobMatchFlow 查看详情和生成材料。</p>
+<p>请登录 jobfishing 查看详情和生成材料。</p>
 """
     return subject, html
 
@@ -89,7 +89,7 @@ def send_verification_email(recipient: str, code: str) -> bool:
         resend.Emails.send({
             "from": settings.notification_email_from,
             "to": [recipient],
-            "subject": "Verify your JobMatchFlow email",
+            "subject": "Verify your jobfishing email",
             "html": f"<h2>Verify your email</h2><p>Your verification code is:</p>"
                     f"<p style=\"font-size:24px;font-weight:bold;letter-spacing:4px;\">{code}</p>"
                     f"<p>This code expires in 15 minutes. If you didn't request this, you can ignore this email.</p>",

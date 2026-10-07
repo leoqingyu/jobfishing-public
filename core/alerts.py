@@ -43,6 +43,6 @@ def alert_task_failure(step: str, error: BaseException) -> None:
     """记完整堆栈日志 + 发告警邮件，标明具体是哪个步骤失败。"""
     logger.error("任务步骤失败: step=%s error=%r", step, error, exc_info=error)
     send_ops_alert(
-        subject=f"[JobMatchFlow] 任务失败: {step}",
+        subject=f"[jobfishing] 任务失败: {step}",
         body=f"步骤：{step}\n错误：{error!r}\n\n完整堆栈见服务端日志。",
     )

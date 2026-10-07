@@ -483,7 +483,7 @@ export default function ExperiencePage() {
     <div className="max-w-3xl">
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Your material</p>
       <h1 className="mt-1 text-3xl font-semibold text-ink">Experience</h1>
-      <p className="mt-2 text-sm text-muted">Keep your background, target roles and priorities up to date — this feeds every resume and cover letter JobMatchFlow generates for you.</p>
+      <p className="mt-2 text-sm text-muted">Keep your background, target roles and priorities up to date — this feeds every resume and cover letter jobfishing generates for you.</p>
 
       {error && <p className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">{error}</p>}
       {loading && <p className="mt-8 text-sm text-muted">Loading…</p>}
@@ -499,7 +499,7 @@ export default function ExperiencePage() {
                 <button type="button" onClick={startEditEmploymentTypePreference} className="rounded-lg border border-line px-3 py-1.5 text-sm font-medium hover:bg-canvas">Edit</button>
               )}
             </div>
-            <p className="mt-1 text-sm text-muted">What kind of roles should JobMatchFlow match you against? Applied before anything else — the most fundamental filter.</p>
+            <p className="mt-1 text-sm text-muted">What kind of roles should jobfishing match you against? Applied before anything else — the most fundamental filter.</p>
 
             {!employmentTypePreferenceEditing ? (
               <p className="mt-4 text-sm text-ink">
@@ -615,7 +615,7 @@ export default function ExperiencePage() {
           {/* Skills */}
           <section className="mt-6 rounded-xl border border-line bg-white p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-ink">Skills</h2>
-            <p className="mt-1 text-sm text-muted">Named technologies/tools JobMatchFlow should treat as canonical when matching you against a job's requirements.</p>
+            <p className="mt-1 text-sm text-muted">Named technologies/tools jobfishing should treat as canonical when matching you against a job's requirements.</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {facts.atoms.filter((a) => a.type === "skill").map((a) => (
                 <span key={a.id} className="flex items-center gap-1.5 rounded-full bg-canvas px-3 py-1.5 text-sm text-ink">
@@ -728,7 +728,7 @@ export default function ExperiencePage() {
               <h2 className="text-lg font-semibold text-ink">Experience library</h2>
               <button type="button" onClick={openNewUnit} className="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-accent-hover">+ Add experience</button>
             </div>
-            <p className="mt-1 text-sm text-muted">Priority controls which experiences JobMatchFlow reaches for first when tailoring a resume.</p>
+            <p className="mt-1 text-sm text-muted">Priority controls which experiences jobfishing reaches for first when tailoring a resume.</p>
 
             <div className="mt-4 space-y-3">
               {units.map((unit) => (

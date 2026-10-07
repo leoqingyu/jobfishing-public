@@ -108,7 +108,7 @@ export default function SettingsPage() {
   return <div className="max-w-3xl">
     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Workspace</p>
     <h1 className="mt-1 text-3xl font-semibold text-ink">Settings</h1>
-    <p className="mt-2 text-sm text-muted">Manage your account and how JobMatchFlow keeps you informed.</p>
+    <p className="mt-2 text-sm text-muted">Manage your account and how jobfishing keeps you informed.</p>
 
     {error && <p className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">{error}</p>}
     {message && <p className="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{message}</p>}

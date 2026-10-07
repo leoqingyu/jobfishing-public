@@ -36,7 +36,7 @@ from scraper.serialization import raw_job_to_dict
 from services.pre_db_pipeline import jobs_ready_for_ingestion, run_pre_db_pipeline
 from services.scrape_orchestrator import DEFAULT_MARKET_COUNTRIES, OrchestratorResult
 
-app = FastAPI(title="JobMatchFlow Debug API", version="0.1")
+app = FastAPI(title="jobfishing Debug API", version="0.1")
 
 
 @app.exception_handler(ScraperError)
@@ -54,7 +54,7 @@ def root():
 @app.get("/about", tags=["meta"])
 def about():
     return {
-        "service": "JobMatchFlow Debug API",
+        "service": "jobfishing Debug API",
         "docs": "/docs",
         "openapi": "/openapi.json",
         "endpoints": {

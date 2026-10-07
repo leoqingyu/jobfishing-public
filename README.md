@@ -1,10 +1,10 @@
-# JobMatchFlow
+# jobfishing
 
 ### A speed-first job scanner and matcher for the Swiss & Luxembourg market.
 
 In markets like Switzerland, getting hired is a game of **coverage and speed**, not
 polish. Good roles attract hundreds of applicants within days and are often closed
-early — so the person who *sees the posting first* has a real edge. JobMatchFlow
+early — so the person who *sees the posting first* has a real edge. jobfishing
 continuously scans postings across sources, filters out the ones that don't fit (wrong
 language, wrong work-authorization, wrong seniority) before they ever reach you, and
 surfaces the handful worth acting on — so your time goes to networking and referrals
@@ -14,16 +14,16 @@ This repo is the full source: a FastAPI backend, an ingestion/scraping pipeline,
 LLM-based scoring and matching engine, resume/cover-letter generation, and a React
 frontend.
 
-[Live Demo](https://www.jobmatchflow.com) · [Architecture](#architecture) · [Report an Issue](https://github.com/leoqingyu/jobmatchflow-public/issues)
+[Live Demo](https://jobfish.ing) · [Architecture](#architecture) · [Report an Issue](https://github.com/leoqingyu/jobfishing-public/issues)
 
-![CI](https://github.com/leoqingyu/jobmatchflow-public/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/leoqingyu/jobfishing-public/actions/workflows/ci.yml/badge.svg)
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![Node 20+](https://img.shields.io/badge/node-20%2B-blue)
 
 ---
 
-![JobMatchFlow dashboard showing matched jobs and application status](docs/images/match-analysis.png)
+![jobfishing dashboard showing matched jobs and application status](docs/images/match-analysis.png)
 
 ## The problem this is built around
 
@@ -40,7 +40,7 @@ Luxembourg, where the binding constraints are different:
   because of a C1-German requirement or a work-authorization constraint. Finding that
   out *after* applying is wasted effort.
 
-JobMatchFlow is designed around those three constraints specifically, rather than
+jobfishing is designed around those three constraints specifically, rather than
 around "make my resume look better."
 
 ## Architecture
@@ -171,8 +171,8 @@ frontend/   React + TypeScript + Vite single-page app
 
 ### 1. Clone and install the backend
 ```bash
-git clone https://github.com/leoqingyu/jobmatchflow-public.git
-cd jobmatchflow-public
+git clone https://github.com/leoqingyu/jobfishing-public.git
+cd jobfishing-public
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -238,11 +238,11 @@ available under AGPL-3.0, including to users interacting with it only over a net
 
 ---
 
-**JobMatchFlow — See the right roles first. Spend your time where it counts.**
+**jobfishing — See the right roles first. Spend your time where it counts.**
 
 
 <div align="center">
 
-**JobMatchFlow — Discover better matches. Prepare stronger applications.**
+**jobfishing — Discover better matches. Prepare stronger applications.**
 
 </div>

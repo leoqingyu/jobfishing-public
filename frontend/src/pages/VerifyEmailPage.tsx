@@ -26,7 +26,7 @@ export default function VerifyEmailPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-canvas px-4">
       <form onSubmit={submit} className="w-full max-w-md rounded-2xl border border-line bg-white p-8 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">JobMatchFlow</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">jobfishing</p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink">Verify your email</h1>
         <p className="mt-2 text-sm text-muted">Enter the 6-digit code we emailed you.</p>
         {error && <p className="mt-5 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</p>}
